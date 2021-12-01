@@ -1,6 +1,6 @@
 
 day1FilePath :: String 
-day1FilePath = "/Users/calebjw/Documents/Developer/AdventOfCode/2021/Inputs/Day1Input.txt"
+day1FilePath = "../Inputs/Day1Input.txt"
 
 parseInput :: String -> [Int]
 parseInput inputText = map (\line -> read line :: Int) $ lines inputText
