@@ -54,15 +54,12 @@ part1 input =  print $ gamma * epsilon
 --part 2
 
 mostCommonAtIndex ::  Int -> [[String]] -> Char
-mostCommonAtIndex index binaries = result
+mostCommonAtIndex index binaries = boolToChar $ x >= y
     where (x, y) = foldl step (0, 0) binaries
           step (ones, zeroes) x
             | x!!index == "1" = (ones + 1, zeroes) 
             | otherwise = (ones, zeroes + 1)
-          result
-            | x >= y = '1'
-            | otherwise = '0'
-
+          
 leastCommonAtIndex :: Int -> [[String]] -> Char
 leastCommonAtIndex index  = invertBinaryCharacter . mostCommonAtIndex index
 
