@@ -33,7 +33,9 @@ invertBinaryCharacter char = boolToChar $ char /= '1'
 invertBinaryString :: [Char] -> [Char]
 invertBinaryString = map invertBinaryCharacter
 
-workOutMostCommon:: Int  -> [String] ->  String
+--part1
+
+workOutMostCommon :: Int  -> [String] ->  String
 workOutMostCommon lineCount totals = map step integerTotals
     where integerTotals = map toInt totals
           step a
@@ -42,8 +44,6 @@ workOutMostCommon lineCount totals = map step integerTotals
 
 mostCommon :: [[String]] -> String
 mostCommon binaries = workOutMostCommon (length binaries) $ foldl (zipWith addBinaryCharacterStrings) ["0","0","0","0","0","0","0","0","0","0","0","0"] binaries
-
---part1
 
 part1 :: String -> IO ()
 part1 input =  print $ gamma * epsilon
