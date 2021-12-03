@@ -13,10 +13,6 @@ boolToChar False = '0'
 addBinaryCharacterStrings :: String -> String -> String
 addBinaryCharacterStrings a b = show $ toInt a + toInt b
 
-digits :: Integral x => x -> [x]
-digits 0 = []
-digits x = digits (x `div` 10) ++ [x `mod` 10]
-
 parseInput :: String -> [[String]]
 parseInput = map (map (:[])) . lines
 
