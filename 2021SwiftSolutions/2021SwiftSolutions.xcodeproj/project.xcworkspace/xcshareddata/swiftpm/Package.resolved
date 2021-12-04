@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PuzzleBox",
+        "repositoryURL": "https://github.com/calebwilson706/puzzle-box-SP",
+        "state": {
+          "branch": "main",
+          "revision": "53976ec217b9ea790ee234351ea112828bf14029",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
