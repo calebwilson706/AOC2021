@@ -26,29 +26,6 @@ getAllPoints (x1, y1) (x2, y2) = [(x,y) | x <- [minX .. maxX], y <- [minY .. max
     where (minX, maxX) = minMax x1 x2
           (minY, maxY) = minMax y1 y2
 
-
---fix this to work
-
---m = 1
---(x1, y1) = (8, 0)
---(x1, y1) = (0, 8)
-
-
---c = y - x
--- y = x + c 
-
-
-getDiagonalPoints :: (Int,Int) -> (Int,Int) -> [(Int, Int)]
-getDiagonalPoints (x1, y1) (x2, y2) = snd $ foldl step ((0, 0), []) [0 .. abs (x1 - x2)]
-    where gradX 
-            | x1 < x2 = 1
-            | otherwise = -1
-          gradY
-            | y1 < y2 = 1
-            | otherwise = -1
-          step (offset, list) _ = (addTwoPoints offset (gradX, gradY), list ++ [addTwoPoints offset (x1, y1)])
-
-
 minMax :: Ord a => a -> a -> (a, a)
 minMax x1 x2 = (minX, maxX)
     where minX = min x1 x2
