@@ -87,6 +87,7 @@ struct BingoCard: Hashable {
             
             for (column, number) in numbers.enumerated() {
                 let new = Set([number])
+
                 if let x = columnsResult[safe: column] {
                     columnsResult[column] = x.union(new)
                 } else {

@@ -1,10 +1,8 @@
 import Data.Char (digitToInt)
+import Helpers (toInt)
 
 day3FilePath :: String
 day3FilePath = "../Inputs/Day3Input.txt"
-
-toInt :: String -> Int
-toInt a = read a ::Int
 
 boolToChar :: Bool -> Char
 boolToChar True = '1'

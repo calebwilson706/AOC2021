@@ -22,7 +22,37 @@ replaceValue indexToReplace newValue originalList = header ++ [newValue] ++ drop
     where (header, footer) = splitAt indexToReplace originalList
 
 getAllPoints :: (Int,Int) -> (Int,Int) -> [(Int, Int)]
-getAllPoints (minX,minY) (maxX, maxY) = [(x,y) | x <- [minX .. maxX], y <- [minY .. maxY]]
+getAllPoints (x1, y1) (x2, y2) = [(x,y) | x <- [minX .. maxX], y <- [minY .. maxY]]
+    where (minX, maxX) = minMax x1 x2
+          (minY, maxY) = minMax y1 y2
+
+
+--fix this to work
+
+--m = 1
+--(x1, y1) = (8, 0)
+--(x1, y1) = (0, 8)
+
+
+--c = y - x
+-- y = x + c 
+
+
+getDiagonalPoints :: (Int,Int) -> (Int,Int) -> [(Int, Int)]
+getDiagonalPoints (x1, y1) (x2, y2) = snd $ foldl step ((0, 0), []) [0 .. abs (x1 - x2)]
+    where gradX 
+            | x1 < x2 = 1
+            | otherwise = -1
+          gradY
+            | y1 < y2 = 1
+            | otherwise = -1
+          step (offset, list) _ = (addTwoPoints offset (gradX, gradY), list ++ [addTwoPoints offset (x1, y1)])
+
+
+minMax :: Ord a => a -> a -> (a, a)
+minMax x1 x2 = (minX, maxX)
+    where minX = min x1 x2
+          maxX = max x1 x2
 
 chunks :: Int -> [a] -> [[a]]
 chunks _ [] = []
@@ -58,3 +88,6 @@ manhattanDistance (x1, y1) (x2, y2) = abs (x2 - x1) + abs (y2 - y1)
 
 distanceFromOrigin :: (Int, Int) -> Int
 distanceFromOrigin = manhattanDistance (0, 0)
+
+toInt :: String -> Int
+toInt a = read a ::Int
