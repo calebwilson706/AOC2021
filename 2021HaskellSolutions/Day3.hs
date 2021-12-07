@@ -72,7 +72,7 @@ getRatingWrapper :: (Int -> [[String]] -> Char) -> [[String]] -> Int
 getRatingWrapper func = getRating func 0
 
 getOxygenRating :: [[String]] -> Int
-getOxygenRating = getRatingWrapper $ mostCommonAtIndex
+getOxygenRating = getRatingWrapper mostCommonAtIndex
 
 getCO2Rating :: [[String]] -> Int
 getCO2Rating = getRatingWrapper leastCommonAtIndex

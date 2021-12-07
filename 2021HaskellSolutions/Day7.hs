@@ -33,8 +33,6 @@ part1 input = print $ foldl (\acc x -> acc + abs (x - m)) 0 xs
 mean :: [Int] -> Int
 mean xs = div (sum xs) (length xs)
 
-
-
 fuelCost :: Int -> Integer
 fuelCost x = floor sd
     where xd = fromIntegral x ::Double
