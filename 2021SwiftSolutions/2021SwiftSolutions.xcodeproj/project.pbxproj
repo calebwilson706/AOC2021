@@ -11,6 +11,7 @@
 		AB4FABE8275B75FB0022FB79 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4FABE7275B75FB0022FB79 /* Day4.swift */; };
 		AB4FABEB275B77A60022FB79 /* PuzzleBox in Frameworks */ = {isa = PBXBuildFile; productRef = AB4FABEA275B77A60022FB79 /* PuzzleBox */; };
 		AB55E363275E8038006309D6 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB55E362275E8038006309D6 /* Day6.swift */; };
+		AB56BA7C276160220032AF55 /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56BA7B276160220032AF55 /* Day8.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 		AB4FABE0275B75EA0022FB79 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AB4FABE7275B75FB0022FB79 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		AB55E362275E8038006309D6 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
+		AB56BA7B276160220032AF55 /* Day8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				AB4FABE0275B75EA0022FB79 /* main.swift */,
 				AB4FABE7275B75FB0022FB79 /* Day4.swift */,
 				AB55E362275E8038006309D6 /* Day6.swift */,
+				AB56BA7B276160220032AF55 /* Day8.swift */,
 			);
 			path = 2021SwiftSolutions;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 				AB4FABE1275B75EA0022FB79 /* main.swift in Sources */,
 				AB55E363275E8038006309D6 /* Day6.swift in Sources */,
 				AB4FABE8275B75FB0022FB79 /* Day4.swift in Sources */,
+				AB56BA7C276160220032AF55 /* Day8.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
