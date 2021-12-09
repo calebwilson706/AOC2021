@@ -26,12 +26,16 @@ class Day9: PuzzleClass {
         let lowPoints = getLowPoints(in: map)
         
         let basins = lowPoints.keys.map {
-            continueBasin(point: $0, basinPoints: Set(), map: map)
+            startBasin(from: $0, map: map)
         }
         
         let basinsLengths = basins.map(\.count).sorted()
         
         print(basinsLengths.dropFirst(basinsLengths.count - 3).reduce(1, *))
+    }
+    
+    func startBasin(from point: Point, map: [Point : Int]) -> Set<Point> {
+        continueBasin(point: point, basinPoints: Set(), map: map)
     }
     
     func continueBasin(point: Point, basinPoints: Set<Point>, map: [Point : Int]) -> Set<Point> {
