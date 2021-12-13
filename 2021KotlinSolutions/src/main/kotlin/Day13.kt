@@ -2,6 +2,8 @@ import java.awt.Point
 import java.io.File
 
 object Day13 {
+    data class Fold(val axis: Char, val n: Int)
+
     val input = File("/Users/calebjw/Documents/Developer/Personal/AOC/AOC2021/Inputs/Day13Input.txt").readText()
 
     fun part1() {
@@ -46,8 +48,6 @@ object Day13 {
             Point(x - difference, this.y)
         }
     }
-
-    data class Fold(val axis: Char, val n: Int)
 
     private fun Set<Point>.display() {
         val maxX = this.maxOf { it.x }
