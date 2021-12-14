@@ -32,7 +32,7 @@ class Day6 {
     
     func parseInput() -> [Int : Int] {
         inputNumbers.reduce([Int : Int]()) { acc, num in
-            acc.addFish(to: num, n: 1)
+            acc.add(to: num, n: 1)
         }
     }
 }
@@ -44,13 +44,15 @@ extension Dictionary where Key == Int, Value == Int {
         let stagesToAddTo = stage == 0 ? [6, 8] : [stage - 1]
         
         stagesToAddTo.forEach {
-            newFish = newFish.addFish(to: $0, n: fishAtStage)
+            newFish = newFish.add(to: $0, n: fishAtStage)
         }
         
         return newFish
     }
-    
-    func addFish(to: Int, n: Int) -> [Int : Int] {
+}
+
+extension Dictionary where Value == Int {
+    func add(to: Key, n: Value) -> [Key : Value] {
         var copy = self
         let existingCount = self[to] ?? 0
         copy[to] = existingCount + n

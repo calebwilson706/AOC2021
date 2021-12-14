@@ -13,6 +13,7 @@
 		AB4FABEB275B77A60022FB79 /* PuzzleBox in Frameworks */ = {isa = PBXBuildFile; productRef = AB4FABEA275B77A60022FB79 /* PuzzleBox */; };
 		AB55E363275E8038006309D6 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB55E362275E8038006309D6 /* Day6.swift */; };
 		AB56BA7C276160220032AF55 /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56BA7B276160220032AF55 /* Day8.swift */; };
+		ABAE79A227690BFD007A06E4 /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE79A127690BFD007A06E4 /* Day14.swift */; };
 		ABDA63F22762C0FD000C304B /* Day9.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA63F12762C0FD000C304B /* Day9.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		AB4FABE7275B75FB0022FB79 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		AB55E362275E8038006309D6 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		AB56BA7B276160220032AF55 /* Day8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8.swift; sourceTree = "<group>"; };
+		ABAE79A127690BFD007A06E4 /* Day14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14.swift; sourceTree = "<group>"; };
 		ABDA63F12762C0FD000C304B /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				AB56BA7B276160220032AF55 /* Day8.swift */,
 				ABDA63F12762C0FD000C304B /* Day9.swift */,
 				AB04F51527662893008BF72D /* Day12.swift */,
+				ABAE79A127690BFD007A06E4 /* Day14.swift */,
 			);
 			path = 2021SwiftSolutions;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAE79A227690BFD007A06E4 /* Day14.swift in Sources */,
 				AB4FABE1275B75EA0022FB79 /* main.swift in Sources */,
 				ABDA63F22762C0FD000C304B /* Day9.swift in Sources */,
 				AB55E363275E8038006309D6 /* Day6.swift in Sources */,
