@@ -3,8 +3,8 @@ import java.io.File
 import java.util.*
 
 object Day15 {
-    val inputLines = File("/Users/calebjw/Documents/Developer/Personal/AOC/AOC2021/Inputs/Day15Input.txt").readLines()
-    val tileWidth = inputLines.size
+    private val inputLines = File("/Users/calebjw/Documents/Developer/Personal/AOC/AOC2021/Inputs/Day15Input.txt").readLines()
+    private val tileWidth = inputLines.size
 
     fun part1() {
         solution(::parseInput)
@@ -14,7 +14,7 @@ object Day15 {
         solution(::part2LargerMap)
     }
 
-    fun solution(mapGenerator: () -> Map<Point, Int>) {
+    private fun solution(mapGenerator: () -> Map<Point, Int>) {
         println(
             optimalPaths(
                 mapGenerator()
@@ -22,7 +22,7 @@ object Day15 {
         )
     }
 
-    fun optimalPaths(map: Map<Point, Int>): Map<Point, Int> {
+    private fun optimalPaths(map: Map<Point, Int>): Map<Point, Int> {
         val origin = Point(0, 0)
         val pointsToVisit: Queue<Point> = LinkedList(listOf(origin))
         val shortestDistance = mutableMapOf<Point, Int>(
@@ -46,7 +46,7 @@ object Day15 {
         return shortestDistance
     }
 
-    fun part2LargerMap(): Map<Point, Int> {
+    private fun part2LargerMap(): Map<Point, Int> {
         val result = mutableMapOf<Point, Int>()
 
         inputLines.forEachIndexed { y, line ->
@@ -64,9 +64,9 @@ object Day15 {
         return result
     }
 
-    fun Int.risk(): Int = if (this > 9) (this % 9) else this
+    private fun Int.risk(): Int = if (this > 9) (this % 9) else this
 
-    fun parseInput(): Map<Point, Int> {
+    private fun parseInput(): Map<Point, Int> {
         val result = mutableMapOf<Point, Int>()
 
         inputLines.forEachIndexed { y, line ->
