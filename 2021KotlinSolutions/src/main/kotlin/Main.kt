@@ -1,5 +1,5 @@
 import java.awt.Point
 
 fun main(args: Array<String>) {
-    Day15.part2()
+    Day16.part2()
 }
